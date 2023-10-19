@@ -38,7 +38,7 @@ class KubernetesCli < Formula
 
     generate_completions_from_executable(bin/"kubectl", "completion", base_name: "kubectl")
 
-    # Install man pages
+    # install man pages 
     # Leave this step for the end as this dirties the git tree
     system "hack/update-generated-docs.sh"
     man1.install Dir["docs/man/man1/*.1"]
